@@ -12,6 +12,9 @@
   --Transition: 0.5s all ease-in-out;
   --NormallText: 20px;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .container {
   max-width: 1200px;
@@ -32,6 +35,12 @@ a {
 
 header {
   padding: 10px 0;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
 }
 header .container {
   display: flex;
@@ -152,9 +161,6 @@ header .account a.Sign:hover {
 }
 /* ------------------------------------------------------- */
 @media (max-width: 768px) {
-  header {
-    position: relative;
-  }
   header .bars {
     display: block;
   }
@@ -208,6 +214,7 @@ header .account a.Sign:hover {
 /* ---------------------------------------------------------------- */
 #Home {
   margin-bottom: 80px;
+  padding-top: 80px;
 }
 #Home .container {
   height: calc(100vh - 80px);
