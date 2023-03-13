@@ -87,7 +87,7 @@ img {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   h1 {
     font-size: 36px;
   }
@@ -250,7 +250,7 @@ header .account a.Sign:hover {
   color: #fff;
 }
 /* ------------------------------------------------------- */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   header .bars {
     display: block;
   }
@@ -342,7 +342,7 @@ header .account a.Sign:hover {
   background-color: #960910;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #Home .container {
     height: auto;
   }
@@ -451,7 +451,7 @@ header .account a.Sign:hover {
   width: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #Works .container > div {
     row-gap: 40px;
   }
@@ -476,20 +476,23 @@ header .account a.Sign:hover {
 }
 
 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  width: 350px !important;
 }
-.swiper-wrapper {
-  gap: 55px;
-}
-
 .swiper-pagination-bullet-active {
   background-color: var(--MAinColor);
 }
 
+.autoplay-progress {
+  display: none;
+}
+
+.autoplay-progress svg {
+  display: none;
+}
 .review-card {
   background-color: #f2303b;
   color: #fff;
