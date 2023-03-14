@@ -1,11 +1,12 @@
+/************************************** Sidebar logic  *******************************************/
 let bars = document.querySelector(".bars");
-let navbar = document.querySelector(".response");
+let sidebar = document.querySelector(".sidebar");
 bars.onclick = function () {
-  navbar.classList.toggle("active");
+  sidebar.classList.toggle("active");
   bars.classList.toggle("open");
 };
 
-// <!-- Initialize Swiper -->
+/************************************** Initialize Swiper  *******************************************/
 const progressCircle = document.querySelector(".autoplay-progress svg");
 const progressContent = document.querySelector(".autoplay-progress span");
 let swiper = new Swiper(".mySwiper", {
@@ -44,13 +45,28 @@ let swiper = new Swiper(".mySwiper", {
   },
 });
 
-// .....................................
+/************************************** window.onscroll Logic  *******************************************/
 let nums = document.querySelectorAll(".box .num");
 let section = document.getElementById("Achievements");
 let started = false;
-console.log(nums, section);
+let Up = document.querySelector(".up");
 
 window.onscroll = function () {
+  /************************************** Up Button Logic  *******************************************/
+  if (this.scrollY >= 500) {
+    Up.classList.add("show");
+  } else {
+    Up.classList.remove("show");
+  }
+
+  Up.onclick = function () {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  /************************************** Achievements Counter Logic  *******************************************/
   if (this.window.scrollY >= section.offsetTop - 350) {
     if (!started) {
       nums.forEach((num) => StartCount(num));
@@ -69,17 +85,5 @@ function StartCount(el) {
   }, 2000 / goal);
 }
 
-/************************************** Up Button  *******************************************/
-let span = document.querySelector(".up");
-window.onscroll = function () {
-  this.scrollY >= 200
-    ? span.classList.add("show")
-    : span.classList.remove("show");
-};
-
-span.onclick = function () {
-  window.scroll({
-    top: 0,
-    behavior: "smooth",
-  });
-};
+/************************************** Initialize AOS  *******************************************/
+AOS.init();

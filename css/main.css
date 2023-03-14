@@ -9,13 +9,15 @@
 :root {
   --MAinColor: #f2303b;
   --PrimeryColor: #6d6e71;
-  --shadow: rgba(12, 21, 29, 0.2);
   --Transition: 0.5s all ease-in-out;
-  --NormallText: 20px;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .container {
@@ -119,10 +121,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   background-color: #fff;
-  border-radius: 10px;
 }
 .up i {
   color: var(--MAinColor);
@@ -133,7 +134,7 @@ img {
   bottom: 20px;
 }
 
-/* -------------------------------------------------------------------------------- */
+/*************************************************** Header style ****************************************************/
 
 header {
   padding: 10px 0;
@@ -270,11 +271,10 @@ header .bars.open span:nth-child(3) {
   transform: rotate(-45deg);
 }
 
-header .response {
+header .sidebar {
   display: none;
 }
 
-/* ------------------------------------------------------- */
 @media (max-width: 767px) {
   header .bars {
     display: block;
@@ -289,7 +289,7 @@ header .response {
   header > .container > .account {
     display: none;
   }
-  header .response {
+  header .sidebar {
     width: 65vw;
     height: 100vh;
     display: flex;
@@ -304,30 +304,29 @@ header .response {
       rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     transition: 0.8s all ease-in-out;
   }
-  header .response.active {
+  header .sidebar.active {
     left: 0%;
   }
-  header .response .menu ul {
+  header .sidebar .menu ul {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 20px;
   }
-  header .response .menu ul a {
+  header .sidebar .menu ul a {
     color: #fff;
   }
-  header .response .menu ul a:hover {
+  header .sidebar .menu ul a:hover {
     color: #fff;
   }
-  header .response .account {
+  header .sidebar .account {
     justify-content: start;
   }
-  header .response .account a {
+  header .sidebar .account a {
     color: #fff;
     padding: 0;
   }
 }
-/* ---------------------------------------------------------------- */
-
+/*************************************************** Home Section style ****************************************************/
 #Home .container {
   height: calc(100vh - 80px);
   display: flex;
@@ -363,8 +362,15 @@ header .response {
   text-align: center;
   transition: 0.3s all ease-in-out;
 }
+
 .row .col1 a:hover {
   background-color: #960910;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #Home .container {
+    height: auto;
+  }
 }
 
 @media (max-width: 767px) {
@@ -375,7 +381,6 @@ header .response {
     flex-direction: column-reverse;
     gap: 40px;
   }
-
   .row .col1,
   .row .col2 {
     width: 100%;
@@ -383,15 +388,10 @@ header .response {
   }
 }
 
-@media (min-width: 767px) and (max-width: 992px) {
-  #Home .container {
-    height: auto;
-  }
-}
-
-/* ------------------------------------------- */
+/*************************************************** About Section style ****************************************************/
 #About .row {
   gap: 40px;
+  flex-direction: row-reverse;
 }
 
 #About .row .col2,
@@ -409,6 +409,10 @@ header .response {
 }
 
 @media (max-width: 767px) {
+  #About .row {
+    gap: 40px;
+    flex-direction: column-reverse;
+  }
   #About h2 {
     text-align: center;
   }
@@ -417,15 +421,14 @@ header .response {
     max-width: 100%;
   }
 }
-/* --------------------------------------- */
-
-.container .feats {
+/*************************************************** Features Section style ****************************************************/
+#Features .container .feats {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
 }
 
-.feat {
+#Features .feat {
   padding: 12px;
   text-align: center;
   display: flex;
@@ -435,26 +438,26 @@ header .response {
   gap: 20px;
 }
 
-.feat h3 {
+#Features .feat h3 {
   font-weight: 900;
   color: var(--PrimeryColor);
 }
 
-.feat p {
+#Features .feat p {
   margin: 0;
 }
 
-.feat img {
+#Feauters .feat img {
   max-width: 250px;
 }
-/* -------------------------------- */
-.boxs {
+/*************************************************** Features Section style ****************************************************/
+#Achievements .boxs {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 50px;
 }
 
-.box {
+#Achievements .box {
   background-color: var(--MAinColor);
   padding: 20px;
   text-align: center;
@@ -463,24 +466,24 @@ header .response {
   position: relative;
   padding-top: 70px;
 }
-.box p {
+#Achievements .box p {
   margin: 0;
   color: #fff;
   font-size: 18px;
   line-height: 1.5;
 }
-.box h3 {
+#Achievements .box h3 {
   font-weight: 900;
   font-size: 24px;
   margin: 0 16px 16px;
 }
 
-.box .num {
+#Achievements .box .num {
   font-size: 64px;
   font-weight: 700;
 }
 
-.box i {
+#Achievements .box i {
   z-index: 2;
   border-radius: 50%;
   background-color: #fff;
@@ -496,13 +499,13 @@ header .response {
 }
 
 @media (max-width: 767px) {
-  .boxs {
+  #Achievements .boxs {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     padding-top: 30px;
   }
 }
 
-/* --------------------------------------------- */
+/*************************************************** Works Section style ****************************************************/
 #Works .container > div {
   display: flex;
   flex-direction: column;
@@ -546,8 +549,7 @@ header .response {
   }
 }
 
-/* ----------------------------------------------------- */
-
+/*************************************************** reviwes Section style ****************************************************/
 .swiper {
   width: 100%;
   height: 100%;
@@ -561,6 +563,7 @@ header .response {
   justify-content: center;
   align-items: center;
 }
+
 .swiper-pagination-bullet-active {
   background-color: var(--MAinColor);
 }
@@ -569,9 +572,6 @@ header .response {
   display: none;
 }
 
-.autoplay-progress svg {
-  display: none;
-}
 .review-card {
   background-color: var(--MAinColor);
   min-height: 350px;
@@ -620,8 +620,7 @@ header .response {
   margin: 20px 0;
 }
 
-/* pricing */
-
+/*************************************************** Pricing Section style ****************************************************/
 #Pricing .content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -732,7 +731,7 @@ header .response {
   }
 }
 
-/* ------------------------------- */
+/*************************************************** footer Section style ****************************************************/
 footer {
   padding-top: 260px;
   height: 500px;

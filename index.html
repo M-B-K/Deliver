@@ -4,48 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Link Swiper's CSS -->
+    <title>Delivery</title>
+    <!---------------------------------------        Swiper's CSS        --------------------------------------->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <!-- for fontawosm -->
+
+    <!---------------------------------------        AOS Lib        --------------------------------------->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!---------------------------------------        Font AWesome       --------------------------------------->
     <link rel="stylesheet" href="./css/all.min.css" />
 
-    <!-- For my style -->
+    <!---------------------------------------        Main Style       --------------------------------------->
     <link rel="stylesheet" href="./css/main.css" />
-    <title>Delivery</title>
   </head>
   <body>
-    <!-- up Button -->
+    <!---------------------------------------        UP Button       --------------------------------------->
     <span class="up">
       <i class="fa-solid fa-circle-up"></i>
     </span>
+    <!---------------------------------------        Header Section       --------------------------------------->
     <header>
       <div class="container">
-        <div class="logo">
+        <div class="logo" data-aos="fade-right" data-aos-duration="1000">
           <img src="./images/logo1.png" alt="" />
         </div>
-        <div class="bars">
+        <div class="bars" data-aos="fade-left" data-aos-duration="1000">
           <span class="line"></span>
           <span class="line"></span>
           <span class="line"></span>
           <span class="line"></span>
         </div>
-        <div class="menu">
+        <div class="menu" data-aos="fade-down" data-aos-duration="1000">
           <ul>
             <li><a href="#Home" class="active">Home</a></li>
             <li><a href="#About">About</a></li>
-            <li><a href="#Feature">Feature</a></li>
+            <li><a href="#Features">Features</a></li>
             <li><a href="#Achievements">Achievements</a></li>
-            <li><a href="#Test">Test</a></li>
+            <li><a href="#Pricing">Pricing</a></li>
           </ul>
         </div>
-        <div class="account">
+        <div class="account" data-aos="fade-left" data-aos-duration="1000">
           <a class="Sign" href="#">Sign in</a>
           <a href="#">Log in</a>
         </div>
-        <div class="response">
+        <div class="sidebar">
           <div class="logo">
             <img src="./images/logo2.png" alt="" />
           </div>
@@ -53,9 +58,9 @@
             <ul>
               <li><a href="#Home" class="active">Home</a></li>
               <li><a href="#About">About</a></li>
-              <li><a href="#Feature">Feature</a></li>
+              <li><a href="#Features">Features</a></li>
               <li><a href="#Achievements">Achievements</a></li>
-              <li><a href="#Test">Test</a></li>
+              <li><a href="#Pricing">Pricing</a></li>
             </ul>
           </div>
           <div class="account">
@@ -65,11 +70,12 @@
         </div>
       </div>
     </header>
+    <!---------------------------------------        Home Section       --------------------------------------->
     <section id="Home">
       <div class="container">
         <div class="row">
-          <div class="col1">
-            <h1>Send your packages as fast as flash</h1>
+          <div class="col1" data-aos="fade-right" data-aos-duration="1000">
+            <h1>Get your packages as fast as flash</h1>
             <p>
               Get everything you need delivered right to your doorstep with
               Deliver. With just a few taps, you can order groceries, restaurant
@@ -78,24 +84,21 @@
               fingertips.
             </p>
             <div class="link">
-              <a href="#Feature">Get Started</a>
-              <a href="App">Download App</a>
+              <a href="#About">Get Started</a>
+              <a href="#Pricing">Download App</a>
             </div>
           </div>
-          <div class="col2">
+          <div class="col2" data-aos="fade-left" data-aos-duration="1000">
             <img src="./images/undraw_order_delivered_re_v4ab (2).svg" alt="" />
           </div>
         </div>
       </div>
     </section>
-
+    <!---------------------------------------        About Section       --------------------------------------->
     <section id="About">
       <div class="container">
         <div class="row">
-          <div class="col2">
-            <img src="./images/Picture1.png" alt="" />
-          </div>
-          <div class="col1">
+          <div class="col1" data-aos="fade-down" data-aos-duration="1000">
             <h2>Our app will make your life a lot easier</h2>
             <p>
               Welcome to our delivery app! Our app was created with the goal of
@@ -107,26 +110,32 @@
               mission is to make your life easier by providing a seamless
               delivery experience that saves you time and energy.
             </p>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.barfee.mart&hl=en_US"
-              >Download Now</a
-            >
+            <a href="#Pricing">Download Now</a>
+          </div>
+          <div class="col2" data-aos="fade-up" data-aos-duration="1000">
+            <img src="./images/Picture1.png" alt="" />
           </div>
         </div>
       </div>
     </section>
-
-    <section id="Feature">
+    <!---------------------------------------        Feature Section       --------------------------------------->
+    <section id="Features">
       <div class="container">
-        <h2>Many features are waiting for you</h2>
+        <h2 data-aos="zoom-out" data-aos-duration="1000">
+          Many features are waiting for you
+        </h2>
         <div class="feats">
           <div class="feat">
             <img
+              data-aos="fade-down"
+              data-aos-duration="1000"
               src="./images/MBK_illustration_image_for_Customizable_order_options_as_a_feat.png"
               alt=""
             />
-            <h3>Customizable order options</h3>
-            <p>
+            <h3 data-aos="fade-up" data-aos-duration="1000">
+              Customizable order options
+            </h3>
+            <p data-aos="fade-up" data-aos-duration="1000">
               We know that everyone has different preferences. Add special
               instructions or request specific items, and we'll do our best to
               accommodate your needs.
@@ -134,11 +143,15 @@
           </div>
           <div class="feat">
             <img
+              data-aos="fade-down"
+              data-aos-duration="1000"
               src="./images/MBK_illustration_image_for_find_location_as_a_feature_in_delive.png"
               alt=""
             />
-            <h3>Real-time order tracking</h3>
-            <p>
+            <h3 data-aos="fade-up" data-aos-duration="1000">
+              Real-time order tracking
+            </h3>
+            <p data-aos="fade-up" data-aos-duration="1000">
               With our delivery app, you can track your order every step of the
               way in real-time. This means you can see exactly when your order
               is on its way.
@@ -146,11 +159,15 @@
           </div>
           <div class="feat">
             <img
+              data-aos="fade-down"
+              data-aos-duration="1000"
               src="./images/MBK_illustration_image_for_Multiple_payment_options_as_a_featur.png"
               alt=""
             />
-            <h3>Multiple Payment Options</h3>
-            <p>
+            <h3 data-aos="fade-up" data-aos-duration="1000">
+              Multiple Payment Options
+            </h3>
+            <p data-aos="fade-up" data-aos-duration="1000">
               We offer a variety of payment options to make it easy for you to
               pay for your order. Choose from credit/debit card, PayPal, or even
               cash on delivery.
@@ -158,11 +175,15 @@
           </div>
           <div class="feat">
             <img
+              data-aos="fade-down"
+              data-aos-duration="1000"
               src="./images/MBK_illustration_image_for_Customer_Support_as_a_feature_in_del.png"
               alt=""
             />
-            <h3>Customer support</h3>
-            <p>
+            <h3 data-aos="fade-up" data-aos-duration="1000">
+              Customer support
+            </h3>
+            <p data-aos="fade-up" data-aos-duration="1000">
               Our customer support team is always available to help you with any
               questions or issues you may have. Contact us and we'll get back to
               you as soon as possible.
@@ -170,11 +191,15 @@
           </div>
           <div class="feat">
             <img
+              data-aos="fade-down"
+              data-aos-duration="1000"
               src="./images/MBK_illustration_image_for_user_friendly_interface_as_a_feature (2).png"
               alt=""
             />
-            <h3>User-friendly interface</h3>
-            <p>
+            <h3 data-aos="fade-up" data-aos-duration="1000">
+              User-friendly interface
+            </h3>
+            <p data-aos="fade-up" data-aos-duration="1000">
               Our app is designed to be easy to use, even for first-time users.
               The interface is intuitive and straightforward, so you can quickly
               and easily place your order.
@@ -182,11 +207,13 @@
           </div>
           <div class="feat">
             <img
+              data-aos="fade-down"
+              data-aos-duration="1000"
               src="./images/MBK_illustration_image_for_easy_ordering_as_a_feature_in_delive.png"
               alt=""
             />
-            <h3>Fast Delivery</h3>
-            <p>
+            <h3 data-aos="fade-up" data-aos-duration="1000">Fast Delivery</h3>
+            <p data-aos="fade-up" data-aos-duration="1000">
               Get your items faster than ever with our fast delivery feature.
               Quick, reliable, and hassle-free, so you can enjoy your purchases
               sooner!
@@ -195,12 +222,14 @@
         </div>
       </div>
     </section>
-
+    <!---------------------------------------        Achievements Section       --------------------------------------->
     <section id="Achievements">
       <div class="container">
-        <h2>We're proud to have accomplished</h2>
+        <h2 data-aos="zoom-out" data-aos-duration="1000">
+          We're proud to have accomplished
+        </h2>
         <div class="boxs">
-          <div class="box">
+          <div class="box" data-aos="fade-up" data-aos-duration="1000">
             <i class="fa-solid fa-truck"></i>
             <p class="num" data-goal="500">0</p>
             <h3>Over 500 deliveries completed</h3>
@@ -209,7 +238,12 @@
               our customers.
             </p>
           </div>
-          <div class="box">
+          <div
+            class="box"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
             <i class="fa-solid fa-face-smile-beam"></i>
             <p class="num" data-goal="135">0</p>
             <h3>Over 135 satisfied customers</h3>
@@ -218,7 +252,12 @@
               and receive their deliveries.
             </p>
           </div>
-          <div class="box">
+          <div
+            class="box"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="800"
+          >
             <i class="fa-solid fa-handshake"></i>
             <p class="num" data-goal="65">0</p>
             <h3>Over 100 partner stores</h3>
@@ -230,13 +269,13 @@
         </div>
       </div>
     </section>
-    <!-- How Its Work -->
+    <!---------------------------------------        Works Section       --------------------------------------->
     <section id="Works">
       <div class="container">
-        <h2>How it Works</h2>
+        <h2 data-aos="zoom-out" data-aos-duration="1000">How it Works</h2>
         <div>
           <div class="row rever">
-            <div class="col1">
+            <div class="col1" data-aos="fade-left" data-aos-duration="1000">
               <h3>Browse the Menu</h3>
               <p>
                 Choose from a wide selection of food and drink options from
@@ -244,15 +283,23 @@
                 and availability to find the perfect meal or snack.
               </p>
             </div>
-            <div class="col2 imgCol">
+            <div
+              class="col2 imgCol"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <img src="./images/undraw_diet_ghvw.svg" alt="" />
             </div>
           </div>
           <div class="row">
-            <div class="col1 imgCol">
+            <div
+              class="col1 imgCol"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
               <img src="./images/undraw_reminder_re_fe15.svg" alt="" />
             </div>
-            <div class="col2">
+            <div class="col2" data-aos="fade-right" data-aos-duration="1000">
               <h3>Place Your Order</h3>
               <p>
                 Add items to your cart, select your preferred payment and
@@ -263,7 +310,7 @@
             </div>
           </div>
           <div class="row rever">
-            <div class="col1">
+            <div class="col1" data-aos="fade-left" data-aos-duration="1000">
               <h3>Track Your Order</h3>
               <p>
                 Use the app to track your order in real-time, from preparation
@@ -272,15 +319,23 @@
                 delivered to your doorstep.
               </p>
             </div>
-            <div class="col2 imgCol">
+            <div
+              class="col2 imgCol"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <img src="./images/undraw_location_tracking_re_n3ok.svg" alt="" />
             </div>
           </div>
           <div class="row">
-            <div class="col1 imgCol">
+            <div
+              class="col1 imgCol"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
               <img src="./images/undraw_online_payments_re_y8f2.svg" alt="" />
             </div>
-            <div class="col2">
+            <div class="col2" data-aos="fade-right" data-aos-duration="1000">
               <h3>Pay Securely</h3>
               <p>
                 Your payment information is encrypted and stored securely, so
@@ -290,7 +345,7 @@
             </div>
           </div>
           <div class="row rever">
-            <div class="col1">
+            <div class="col1" data-aos="fade-left" data-aos-duration="1000">
               <h3>Enjoy Your Meal</h3>
               <p>
                 Once your order arrives, you can sit back, relax, and enjoy your
@@ -298,20 +353,30 @@
                 our customer support team for assistance.
               </p>
             </div>
-            <div class="col2 imgCol">
+            <div
+              class="col2 imgCol"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <img src="./images/undraw_having_fun_re_vj4h.svg" alt="" />
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <section id="reviwe">
+    <!---------------------------------------        reviwe Section       --------------------------------------->
+    <section id="reviwes">
       <div class="container">
-        <h2>What our customer say about us</h2>
+        <h2 data-aos="zoom-out" data-aos-duration="1000">
+          What our customer say about us
+        </h2>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div
+              class="swiper-slide"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <div class="review-card">
                 <div class="review-content">
                   <img src="./images/1588833615Chris-weber.png" alt="" />
@@ -329,8 +394,11 @@
                 </div>
               </div>
             </div>
-
-            <div class="swiper-slide">
+            <div
+              class="swiper-slide"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <div class="review-card">
                 <div class="review-content">
                   <img src="./images/1588833664Ahsan (1).png" alt="" />
@@ -347,7 +415,11 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
+            <div
+              class="swiper-slide"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <div class="review-card">
                 <div class="review-content">
                   <img src="./images/1588833650Steven-Brown-1.png" alt="" />
@@ -364,7 +436,11 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
+            <div
+              class="swiper-slide"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <div class="review-card">
                 <div class="review-content">
                   <img src="./images/1588833643Jeb-1.png" alt="" />
@@ -381,7 +457,11 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
+            <div
+              class="swiper-slide"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <div class="review-card">
                 <div class="review-content">
                   <img src="./images/1588833634Vanita.png" alt="" />
@@ -409,12 +489,19 @@
         </div>
       </div>
     </section>
-
+    <!---------------------------------------        Pricing Section       --------------------------------------->
     <section id="Pricing">
       <div class="container">
-        <h2>Transparent Pricing for Your Convenience</h2>
+        <h2 data-aos="zoom-out" data-aos-duration="1000">
+          Transparent Pricing for Your Convenience
+        </h2>
         <div class="content">
-          <div class="col">
+          <div
+            class="col"
+            data-aos="flip-right"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
             <img src="./images/undraw_on_the_way_re_swjt.svg" alt="" />
             <h3>Starter</h3>
             <div>
@@ -429,7 +516,12 @@
             </p>
             <button>Choose Pro</button>
           </div>
-          <div class="col active">
+          <div
+            class="col active"
+            data-aos="flip-right"
+            data-aos-duration="1000"
+            data-aos-delay="500"
+          >
             <img src="./images/undraw_delivery_truck_vt6p.svg" alt="" />
             <h3>Pro</h3>
             <div>
@@ -444,7 +536,12 @@
             </p>
             <button>Choose Pro</button>
           </div>
-          <div class="col">
+          <div
+            class="col"
+            data-aos="flip-right"
+            data-aos-duration="1000"
+            data-aos-delay="900"
+          >
             <img src="./images/undraw_aircraft_re_m05i.svg" alt="" />
             <h3>business</h3>
             <div>
@@ -462,23 +559,36 @@
         </div>
       </div>
     </section>
-
+    <!---------------------------------------        footer Section       --------------------------------------->
     <footer>
-      <img src="./images/logo2.png" alt="" />
-      <div class="soicalicon">
-        <a href="#"><i class="fab fa-facebook"></i></a>
+      <div
+        class="container"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="0"
+      >
+        <img src="./images/logo2.png" alt="" />
+        <div class="soicalicon">
+          <a href="#"><i class="fab fa-facebook"></i></a>
 
-        <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
 
-        <a href="#"><i class="fab fa-telegram"></i></a>
+          <a href="#"><i class="fab fa-telegram"></i></a>
 
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
 
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>Deliver is Powered by MBK</p>
       </div>
-      <p>Deliver is Powered by MBK</p>
     </footer>
   </body>
+
+  <!---------------------------------------        AOS LIB       --------------------------------------->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <!---------------------------------------        Swiper LIB       --------------------------------------->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!---------------------------------------        Custome Js       --------------------------------------->
   <script src="./main.js"></script>
 </html>
