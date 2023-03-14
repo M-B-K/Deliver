@@ -40,7 +40,7 @@ h2 {
   text-align: center;
   color: var(--MAinColor);
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
   font-weight: 900;
 }
 
@@ -68,7 +68,7 @@ img {
   width: 100%;
 }
 
-@media (min-width: 767px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
   h1 {
     font-size: 32px;
   }
@@ -108,6 +108,31 @@ img {
   }
 }
 
+/*************************************************** Up Button style ****************************************************/
+.up {
+  position: fixed;
+  bottom: -50px;
+  right: -50px;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.up i {
+  color: var(--MAinColor);
+  font-size: 30px;
+}
+.up.show {
+  right: 20px;
+  bottom: 20px;
+}
+
 /* -------------------------------------------------------------------------------- */
 
 header {
@@ -125,7 +150,6 @@ header .container {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: auto;
   flex-wrap: wrap;
 }
 
@@ -139,13 +163,56 @@ header .logo {
 }
 
 header .logo img {
-  max-width: 50px;
+  width: 120px;
 }
 
 header .logo span {
   font-size: 36px;
   font-weight: 900;
   color: var(--MAinColor);
+}
+
+header .menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+header .menu ul li a {
+  font-weight: 700;
+  transition: 0.3s all ease-in-out;
+}
+
+header .menu ul li a:hover {
+  color: var(--MAinColor);
+}
+
+header .account {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+header .account a {
+  color: var(--MAinColor);
+  font-weight: 700;
+}
+header .account a.Sign {
+  border: 2px solid var(--MAinColor);
+  padding: 8px;
+  border-radius: 6px;
+  transition: 0.3s all ease-in-out;
+}
+header .account a.Sign:hover {
+  background-color: var(--MAinColor);
+  color: #fff;
 }
 
 header .bars {
@@ -203,52 +270,10 @@ header .bars.open span:nth-child(3) {
   transform: rotate(-45deg);
 }
 
-header .menu ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  cursor: pointer;
-}
-
-header .menu ul li a {
-  font-weight: 700;
-  transition: 0.3s all ease-in-out;
-}
-
-header .menu ul li a:hover {
-  color: var(--MAinColor);
-}
-
-header .account {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
 header .response {
   display: none;
 }
 
-header .account a {
-  color: var(--MAinColor);
-  font-weight: 700;
-}
-header .account a.Sign {
-  border: 2px solid var(--MAinColor);
-  padding: 8px;
-  border-radius: 6px;
-  transition: 0.3s all ease-in-out;
-}
-header .account a.Sign:hover {
-  background-color: var(--MAinColor);
-  color: #fff;
-}
 /* ------------------------------------------------------- */
 @media (max-width: 767px) {
   header .bars {
@@ -268,7 +293,7 @@ header .account a.Sign:hover {
     width: 65vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     background-color: var(--MAinColor);
     position: absolute;
@@ -397,7 +422,7 @@ header .account a.Sign:hover {
 .container .feats {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-gap: 20px;
+  gap: 20px;
 }
 
 .feat {
@@ -421,6 +446,60 @@ header .account a.Sign:hover {
 
 .feat img {
   max-width: 250px;
+}
+/* -------------------------------- */
+.boxs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 50px;
+}
+
+.box {
+  background-color: var(--MAinColor);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+  position: relative;
+  padding-top: 70px;
+}
+.box p {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.box h3 {
+  font-weight: 900;
+  font-size: 24px;
+  margin: 0 16px 16px;
+}
+
+.box .num {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.box i {
+  z-index: 2;
+  border-radius: 50%;
+  background-color: #fff;
+  color: var(--MAinColor);
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  line-height: 120px;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+  .boxs {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding-top: 30px;
+  }
 }
 
 /* --------------------------------------------- */
@@ -494,7 +573,8 @@ header .account a.Sign:hover {
   display: none;
 }
 .review-card {
-  background-color: #f2303b;
+  background-color: var(--MAinColor);
+  min-height: 350px;
   color: #fff;
   border-radius: 10px;
   margin-bottom: 40px;
@@ -505,7 +585,7 @@ header .account a.Sign:hover {
 }
 
 .review-card img {
-  z-index: 99;
+  z-index: 2;
   border-radius: 50%;
   border: 8px solid #fff;
   position: absolute;
@@ -533,4 +613,154 @@ header .account a.Sign:hover {
   color: #fff;
   font-size: 18px;
   line-height: 1.5;
+}
+
+.review-content i {
+  font-size: 46px;
+  margin: 20px 0;
+}
+
+/* pricing */
+
+#Pricing .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+#Pricing .content .col {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 1px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 4px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+#Pricing .content .col.active {
+  scale: 1.1;
+}
+
+#Pricing .content .col img {
+  max-width: 300px;
+}
+
+#Pricing .content .col h3 {
+  color: var(--PrimeryColor);
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#Pricing .content .col p {
+  font-weight: 700;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#Pricing .content .col .price {
+  display: flex;
+  align-items: flex-start;
+  align-items: center;
+}
+
+#Pricing .content .col .price .num {
+  color: var(--PrimeryColor);
+  font-size: 52px;
+  font-weight: 700;
+  padding-right: 6px;
+}
+
+#Pricing .content .col.active .price .num {
+  color: var(--MAinColor);
+}
+
+#Pricing .content .col .price .txt {
+  border-left: 5px solid var(--PrimeryColor);
+  text-align: left;
+  font-size: 12px;
+  padding-left: 6px;
+}
+
+#Pricing .content .col.active .price .txt {
+  border-color: var(--MAinColor);
+}
+
+#Pricing .content .col button {
+  background: var(--MAinColor);
+  cursor: pointer;
+  border: none;
+  padding: 15px 15px;
+  width: 100%;
+  color: #fff;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #Pricing .content {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  }
+  #Pricing .content .col h3 {
+    font-size: 28px;
+    font-weight: 700;
+  }
+  #Pricing .content .col p {
+    font-size: 12px;
+  }
+  #Pricing .content .col .price .num {
+    font-size: 36px;
+  }
+  #Pricing .content .col .price .txt {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  #Pricing .content {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  #Pricing .content .col.active {
+    scale: 1;
+  }
+}
+
+/* ------------------------------- */
+footer {
+  padding-top: 260px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  background-image: url(../images/wave.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+footer img {
+  width: 200px;
+}
+footer .soicalicon {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+footer i {
+  color: #fff;
+  font-size: 20px;
+}
+
+footer p {
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
 }

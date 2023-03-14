@@ -43,3 +43,43 @@ let swiper = new Swiper(".mySwiper", {
     },
   },
 });
+
+// .....................................
+let nums = document.querySelectorAll(".box .num");
+let section = document.getElementById("Achievements");
+let started = false;
+console.log(nums, section);
+
+window.onscroll = function () {
+  if (this.window.scrollY >= section.offsetTop - 350) {
+    if (!started) {
+      nums.forEach((num) => StartCount(num));
+    }
+    started = true;
+  }
+};
+
+function StartCount(el) {
+  let goal = el.dataset.goal;
+  let count = setInterval(() => {
+    el.textContent++;
+    if (el.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 2000 / goal);
+}
+
+/************************************** Up Button  *******************************************/
+let span = document.querySelector(".up");
+window.onscroll = function () {
+  this.scrollY >= 200
+    ? span.classList.add("show")
+    : span.classList.remove("show");
+};
+
+span.onclick = function () {
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
+};
