@@ -30,3 +30,7 @@ It is a landing page for the delivery service through a mobile application that 
 
 - swiper js
 - Aos js
+
+## Live Demo
+
+[https://m-b-k.github.io/Deliver/](https://m-b-k.github.io/Deliver/)
